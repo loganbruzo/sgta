@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Django settings for config project.
 
@@ -29,6 +30,18 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+=======
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+SECRET_KEY = 'django-insecure-chave-qualquer'
+
+DEBUG = True
+ALLOWED_HOSTS = ['*']
+
+>>>>>>> 65029bc0 (primeiro commit)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,8 +50,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
 ]
 
+=======
+
+    'tarefas',
+    'usuarios',
+]
+
+
+>>>>>>> 65029bc0 (primeiro commit)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,8 +71,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+<<<<<<< HEAD
 ROOT_URLCONF = 'config.urls'
 
+=======
+
+ROOT_URLCONF = 'config.urls'
+
+
+>>>>>>> 65029bc0 (primeiro commit)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -58,6 +87,10 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+<<<<<<< HEAD
+=======
+                'django.template.context_processors.debug',
+>>>>>>> 65029bc0 (primeiro commit)
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -66,12 +99,19 @@ TEMPLATES = [
     },
 ]
 
+<<<<<<< HEAD
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+=======
+
+WSGI_APPLICATION = 'config.wsgi.application'
+
+
+>>>>>>> 65029bc0 (primeiro commit)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -80,9 +120,12 @@ DATABASES = {
 }
 
 
+<<<<<<< HEAD
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
+=======
+>>>>>>> 65029bc0 (primeiro commit)
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -99,6 +142,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+<<<<<<< HEAD
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
@@ -115,3 +159,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+=======
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_TZ = True
+
+
+STATIC_URL = 'static/'
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+>>>>>>> 65029bc0 (primeiro commit)

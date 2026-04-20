@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 URL configuration for config project.
 
@@ -20,3 +21,18 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+=======
+from django.http import HttpResponse
+from django.contrib import admin
+from django.urls import path, include
+
+def home(request):
+    return HttpResponse("API rodando")
+
+urlpatterns = [
+    path('', home),
+    path('admin/', admin.site.urls),
+    path('api/tarefas/', include('tarefas.urls')),
+    path('api/usuarios/', include('usuarios.urls')),
+]
+>>>>>>> 65029bc0 (primeiro commit)
